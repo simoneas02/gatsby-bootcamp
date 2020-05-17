@@ -1,6 +1,6 @@
 ---
 title: "React Challenges DOJO"
-date: "2020-05-17"
+date: "2020-05-16"
 ---
 
 I just launched a new bootcamp!

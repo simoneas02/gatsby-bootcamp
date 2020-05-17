@@ -1,5 +1,5 @@
 ---
-title: "Coll Gatsby Bootcamp"
+title: "Cool Gatsby Bootcamp"
 date: "2020-05-17"
 ---
 
