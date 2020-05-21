@@ -5,7 +5,7 @@ date: "2020-05-16"
 
 I just launched a new bootcamp!
 
-# Topics Covered
+## Topics Covered
 
 1. CSS Grid
 2. React Hooks
