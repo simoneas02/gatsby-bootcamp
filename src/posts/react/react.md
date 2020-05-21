@@ -3,7 +3,9 @@ title: "React Challenges DOJO"
 date: "2020-05-16"
 ---
 
-I just launched a new bootcamp!
+> I just launched a new bootcamp!
+
+![Psy image](./psy3.jpg)
 
 ## Topics Covered
 
