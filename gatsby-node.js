@@ -20,6 +20,13 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const response = await graphql(`
     query {
+      allContentfulBlogPost {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
       allMarkdownRemark {
         edges {
           node {
@@ -32,11 +39,21 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  response.data.allMarkdownRemark.edges.forEach(edge => {
+  const contentfulBlogPost = response.data.allContentfulBlogPost.edges.map(
+    edge => edge.node.slug
+  )
+
+  const markdownRemark = response.data.allMarkdownRemark.edges.map(
+    edge => edge.node.fields.slug
+  )
+
+  const slugs = [...contentfulBlogPost, ...markdownRemark]
+
+  slugs.forEach(slug => {
     createPage({
       component: blogTemplate,
-      path: `/blog/${edge.node.fields.slug}`,
-      context: { slug: edge.node.fields.slug },
+      path: `/blog/${slug}`,
+      context: { slug: slug },
     })
   })
 }
