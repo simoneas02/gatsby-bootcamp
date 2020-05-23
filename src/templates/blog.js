@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
+import Head from "../components/head"
 import Layout from "../components/layout"
 
 export const query = graphql`
@@ -38,6 +39,7 @@ const Blog = props => {
     <Layout>
       {props?.data?.markdownRemark ? (
         <>
+          <Head title={props?.data?.markdownRemark?.frontmatter.title} />
           <h1>{props?.data?.markdownRemark?.frontmatter.title}</h1>
           <p>{props?.data?.markdownRemark?.frontmatter.date}</p>
           <div
@@ -48,6 +50,7 @@ const Blog = props => {
         </>
       ) : (
         <>
+          <Head title={props?.data?.contentfulBlogPost.title} />
           <h1>{props?.data?.contentfulBlogPost.title}</h1>
           <p>{props?.data?.contentfulBlogPost.date}</p>
           {documentToReactComponents(
