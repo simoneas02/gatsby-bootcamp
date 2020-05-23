@@ -9,8 +9,8 @@ const AboutPage = () => (
     <Head title="About" />
     <h1>About Me</h1>
     <p>
-      I love codes and in my free time I usually spend a lot of time toshare
-      with the world about my journing as a developer.
+      I love codes and in my free time I usually spend a lot of time sharing
+      with the world about my journey as a developer.
     </p>
 
     <p>
